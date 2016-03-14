@@ -3,14 +3,15 @@ import java.util.List;
 import java.util.Scanner;
  
 public class Questionnaire {
-    private List<K�simused> k�simus; // Küsimuste list
+    private List<Küsimused> küsimus; // Küsimuste list
     private String mängija_nimi; // Mängija nimi
     private Date alustusaeg; // Algusaeg
     private Date lõppaeg; // Lõpuaeg
-    private List<K�simused> k�situd ; // Küsitud küsimuste list, tulemuste jaoks
+    private List<Küsimused> küsitud ; // Küsitud küsimuste list, tulemuste jaoks
     private int correctAnswers; // õigeid vastusied
+    private String kodeering = "UTF-8";
    
-    public Questionnaire(String input, String name)
+    public Questionnaire(String input,String kodeering, String name)
     {
         this.mängija_nimi = mängija_nimi;
         parseInputFile(input);
@@ -19,31 +20,33 @@ public class Questionnaire {
     }
    
     private void parseInputFile(String input) {
-        // Siin loe fail sisse, tee oma failist Question tüüpi isendid
-        // Siia paned tsükli, mis splitib sul need definitsioonid ja seletused ära, ja nendest teed Qustion tüüpi isendid (konstruktorit vaata seal)
+        // Siin loe fail sisse, tee oma failist Question tĆ¼Ć¼pi isendid
+        // Siia paned tsĆ¼kli, mis splitib sul need definitsioonid ja seletused Ć¤ra, ja nendest teed Qustion tĆ¼Ć¼pi isendid (konstruktorit vaata seal)
     }
    
     private void alustaMängu() {
-        // Testi põhitsükkel
-        while (k�simus.size() != 0)
+        // Testi pĆµhitsĆ¼kkel
+        while (küsimus.size() != 0)
         {
-            int i =  0 + (int)(Math.random() * k�simus.size());
-            K�simused k = k�simus.get(i);
+            int i =  0 + (int)(Math.random() * küsimus.size());
+            Küsimused k = küsimus.get(i);
             Scanner scanner = new Scanner(System.in);
             System.out.println(k.getDefinitsioon());
-            String u_answer = scanner.next();
-            k.setU_answer(u_answer);
-            k�simus.remove(i);
-            k�situd.add(k);          
+            String mängija_vastus = scanner.next();
+            k.setU_answer(mängija_vastus);
+            küsimus.remove(i);
+            küsitud.add(k);          
         }
-        // Lõpptulemus
-        for (K�simused k�simus: k�situd) {
-            if (k�simus.on�ige())
-                System.out.println("Õ: Vastasid õigesti!"); // Muuda seda detailisemaks
+        // LĆµpptulemus
+        for (Küsimused küsimus: küsitud) {
+            if (küsimus.onÕige())
+                System.out.println("✔: Tubli. Õige!"); // Muuda seda detailisemaks
             else
-                System.out.println("V: Vastasid valesti"); // Muda seda detailsemaks, mis oleks õige olnud, mis tema vastas jne
+                System.out.println("✘: Eksisite!"); // Muda seda detailsemaks, mis oleks Ćµige olnud, mis tema vastas jne
         }
-        // Prindi välja testi tegemiseks kulunud aeg (finishtime - starttime)
+        System.out.println((new java.util.Date()).getTime() - alustusaeg.getTime()); //arvutan mängu kestuse
+        // Prindi vĆ¤lja testi tegemiseks kulunud aeg (finishtime - starttime)
+        
     }
    
  

@@ -1,32 +1,32 @@
-public class K¸simused {
+public class K√ºsimused {
     private String definitsioon; // Definitsioon
-    private String ıige_vastus; // √ïige vastus
-    private String m‰ngija_vastus; // Kasutaja pakutud vastus
-    private boolean onıige;
+    private String √µige_vastus; // √ïige vastus
+    private String m√§ngija_vastus; // Kasutaja pakutud vastus
+    private boolean on√ïige;
    
-    public void k¸simused(String definitsioon, String answer) {
+    public void k√ºsimused(String definitsioon, String answer) {
         this.definitsioon = definitsioon;
-        this.ıige_vastus = answer;     
+        this.√µige_vastus = answer;     
     }
  
     public String getU_answer() {
-        return m‰ngija_vastus;
+        return m√§ngija_vastus;
     }
  
     public void setU_answer(String m√§ngija_vastus) {
-        this.m‰ngija_vastus = m√§ngija_vastus.toLowerCase();
+        this.m√§ngija_vastus = m√§ngija_vastus.toLowerCase();
         // Kontrolli tulemust
-        if (m‰ngija_vastus.toLowerCase().equals(ıige_vastus.toLowerCase()))
-            onıige = true;
+        if (m√§ngija_vastus.toLowerCase().equals(√µige_vastus.toLowerCase()))
+            on√ïige = true;
         //on√ïige = false;
     } 
     public String getDefinitsioon() {
         return definitsioon;
     } 
-    public String get’ige_vastus() {
-        return ıige_vastus;
+    public String get√µige_vastus() {
+        return √µige_vastus;
     } 
-    public boolean on’ige() {
-        return onıige;
+    public boolean on√ïige() {
+        return on√ïige;
     }   
 }
