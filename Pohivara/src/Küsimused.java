@@ -1,6 +1,6 @@
 public class Küsimused {
     private String definitsioon; // Definitsioon
-    private String õige_vastus; // Ã•ige vastus
+    private String õige_vastus; // Õige vastus
     private String mängija_vastus; // Kasutaja pakutud vastus
     private boolean onõige;
    
@@ -13,12 +13,12 @@ public class Küsimused {
         return mängija_vastus;
     }
  
-    public void setU_answer(String mÃ¤ngija_vastus) {
-        this.mängija_vastus = mÃ¤ngija_vastus.toLowerCase();
+    public void setU_answer(String mängija_vastus) {
+        this.mängija_vastus = mängija_vastus.toLowerCase();
         // Kontrolli tulemust
         if (mängija_vastus.toLowerCase().equals(õige_vastus.toLowerCase()))
             onõige = true;
-        //onÃ•ige = false;
+        //onõige = false;
     } 
     public String getDefinitsioon() {
         return definitsioon;
