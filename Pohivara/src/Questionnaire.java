@@ -10,7 +10,6 @@ public class Questionnaire {
     private List<Küsimus> küsimused = new ArrayList<>(); // Küsimuste list
     private String mängija_nimi; // Mängija nimi
     private List<Küsimus> küsitud = new ArrayList<>(); // Küsitud küsimuste list, tulemuste jaoks
-    private int correctAnswers; // õigeid vastusied
     static String kodeering = "UTF-8";
    
     public Questionnaire(String input, String name) throws Exception {
@@ -38,7 +37,9 @@ public class Questionnaire {
     	
     	Random counter = new Random();
         int tsükli_pikkus = counter.nextInt(12)+5;
+
         Scanner scanner = new Scanner(System.in);
+        int correctAnswers = 0;
         for(int t = 0; t<tsükli_pikkus;t++){
       
             int i =  0 + (int)(Math.random() * küsimused.size());
@@ -50,23 +51,34 @@ public class Questionnaire {
             while(end - start < 10000){ //tsükkel, kus loeb aega, ja kui aeg täis, siis laseb printida
             end = System.currentTimeMillis();
             }
-            
             String mängija_vastus = scanner.nextLine();  
-            k.setU_answer(mängija_vastus);
+            if(k.setU_answer(mängija_vastus)){
+            	correctAnswers++;
+            }
             küsimused.remove(i);
             küsitud.add(k);      
-            
-            
+                        
         }
+        
+        double protsent = (100.0* correctAnswers)/tsükli_pikkus;
+        if(protsent <= 45){
+        	System.out.println("Tundub, et peaksite õppima. Teie tulemus protsentides on:" + protsent +"%");}
+        else if (protsent>45 && protsent <=75){
+        	System.out.println("See tulemus on küllaltki hea, ent siiski tuleb veel harjutada! Saite " +protsent+ "%");
+        }
+        else
+        	System.out.println("Väga tubli. Nii õppides võite isegi füüsikuks saada." + protsent+"%");
+        System.out.println();
         scanner.close();
         
         // Lõpptulemus
         for (Küsimus küsimus: küsitud) {
             if (küsimus.onÕige())
-                System.out.println(küsimus.toString()+"✔: Tubli!"); // Muuda seda detailisemaks
+                System.out.println(küsimus.toString()+"✔: Tubli!"); 
             else
-                System.out.println(küsimus.toString()+"✘: Eksisite!"); // Muda seda detailsemaks, mis oleks Ćµige olnud, mis tema vastas jne
+                System.out.println(küsimus.toString()+"✘: Eksisite!"); 
         }
+        
                
     }
    
