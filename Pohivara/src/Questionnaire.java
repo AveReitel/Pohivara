@@ -54,16 +54,15 @@ public class Questionnaire {
         }
         scanner.close();
         
-        // LĆµpptulemus
+        // Lõpptulemus
         for (Küsimus küsimus: küsitud) {
             if (küsimus.onÕige())
                 System.out.println(küsimus.toString()+"✔: Tubli. Õige!"); // Muuda seda detailisemaks
             else
-                System.out.println(küsimus.toString()+"✘: Eksisiteee!"); // Muda seda detailsemaks, mis oleks Ćµige olnud, mis tema vastas jne
+                System.out.println(küsimus.toString()+"✘: Eksisite!"); // Muda seda detailsemaks, mis oleks Ćµige olnud, mis tema vastas jne
         }
                
     }
    
  
 }
-
