@@ -14,12 +14,16 @@ public class Küsimus {
         return mängija_vastus;
     }
  
-    public void setU_answer(String mängija_vastus) {
-        this.mängija_vastus = mängija_vastus.toLowerCase();
-        // Kontrolli tulemust
-        if (mängija_vastus.equals(õige_vastus.toLowerCase()))
+    public boolean setU_answer(String mängija_vastus) {
+        this.mängija_vastus = mängija_vastus;
+        if (this.mängija_vastus.equalsIgnoreCase(õige_vastus)){//see tähendab seda, et tähevahet ta ei tee
             onÕige = true;
-        	//onÕige = false;
+            return true;
+        }
+        onÕige = false;
+        return false;
+        
+  
     } 
     public String getDefinitsioon() {
         return definitsioon;
