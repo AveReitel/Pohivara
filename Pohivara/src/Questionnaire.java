@@ -34,7 +34,7 @@ public class Questionnaire {
         	
     }
    
-    private void alustaMängu() {
+    private void alustaMängu() throws InterruptedException {
     	
     	Random counter = new Random();
         int tsükli_pikkus = counter.nextInt(12)+5;
@@ -43,9 +43,15 @@ public class Questionnaire {
       
             int i =  0 + (int)(Math.random() * küsimused.size());
             Küsimus k = küsimused.get(i);
-            
             System.out.println(k.getDefinitsioon());
-            String mängija_vastus = scanner.nextLine();
+            
+            long start = System.currentTimeMillis(); //seda kasutame selleks, et kohe ei prindiks uut defi
+            long end = start; //long on andmetüüp, mahutab suuremat arvu, ja seda peab kasutama, sest TimeMillis tagastab long tüüpi arvu
+            while(end - start < 10000){ //tsükkel, kus loeb aega, ja kui aeg täis, siis laseb printida
+            end = System.currentTimeMillis();
+            }
+            
+            String mängija_vastus = scanner.nextLine();  
             k.setU_answer(mängija_vastus);
             küsimused.remove(i);
             küsitud.add(k);      
@@ -57,7 +63,7 @@ public class Questionnaire {
         // Lõpptulemus
         for (Küsimus küsimus: küsitud) {
             if (küsimus.onÕige())
-                System.out.println(küsimus.toString()+"✔: Tubli. Õige!"); // Muuda seda detailisemaks
+                System.out.println(küsimus.toString()+"✔: Tubli!"); // Muuda seda detailisemaks
             else
                 System.out.println(küsimus.toString()+"✘: Eksisite!"); // Muda seda detailsemaks, mis oleks Ćµige olnud, mis tema vastas jne
         }

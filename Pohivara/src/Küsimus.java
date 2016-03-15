@@ -5,7 +5,7 @@ public class Küsimus {
     private boolean onÕige;
    
     public Küsimus(String definitsioon, String answer) {
-        this.definitsioon = definitsioon.replaceAll("(.{80} )", "$1\n");
+        this.definitsioon = definitsioon.replaceAll("(.{100} )", "$1\n");
         this.õige_vastus = answer;   
         
     }
@@ -19,7 +19,7 @@ public class Küsimus {
         // Kontrolli tulemust
         if (mängija_vastus.equals(õige_vastus.toLowerCase()))
             onÕige = true;
-        //onÕige = false;
+        	//onÕige = false;
     } 
     public String getDefinitsioon() {
         return definitsioon;
@@ -33,8 +33,8 @@ public class Küsimus {
 
 	@Override
 	public String toString() {
-		return "Küsimus [definitsioon=" + definitsioon + ", õige_vastus=" + õige_vastus + ", mängija_vastus="
-				+ mängija_vastus + ", onÕige=" + onÕige + "]";
+		return "\nKüsimus [definitsioon= " + definitsioon + ", õige_vastus= " + õige_vastus + ", Teie vastus= "
+				+ mängija_vastus + ", Tulemus=" + onÕige + "]";
 	}   
     
     
