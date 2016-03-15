@@ -99,7 +99,7 @@ public class Questionnaire {
             if (küsimus.onÕige())
                 System.out.println(küsimus.toString()+"✔: Tubli. Õige!"); // Muuda seda detailisemaks
             else
-                System.out.println(küsimus.toString()+"✘: Eksisite!"); // Muda seda detailsemaks, mis oleks Ćµige olnud, mis tema vastas jne
+                System.out.println(küsimus.toString()+"✘: Eksisiteee!"); // Muda seda detailsemaks, mis oleks Ćµige olnud, mis tema vastas jne
         }
                
 >>>>>>> e6be25ce004429b120db2714631fc17b928a599c
