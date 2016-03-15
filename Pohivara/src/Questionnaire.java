@@ -8,7 +8,7 @@ public class Questionnaire {
     private Date alustusaeg; // Algusaeg
     private Date lõppaeg; // Lõpuaeg
     private List<Küsimused> küsitud ; // Küsitud küsimuste list, tulemuste jaoks
-    private int correctAnswers; // Ãµigeid vastusied
+    private int correctAnswers; // Õigeid vastuseid
    
     public Questionnaire(String input, String name)
     {
@@ -24,7 +24,7 @@ public class Questionnaire {
     }
    
     private void alustaMängu() {
-        // Testi pÃµhitsükkel
+        // Testi põhitsükkel
         while (küsimus.size() != 0)
         {
             int i =  0 + (int)(Math.random() * küsimus.size());

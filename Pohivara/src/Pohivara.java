@@ -24,7 +24,7 @@ public static void main(String[] args) throws Exception {
         definitsioon.add(t¸kid[1]);}
         
     Scanner scan = new Scanner (System.in);
-    System.out.println("Kohe hakkame m√§ngima ¸ht huvitavat m‰ngu. Selle idee on Sulle selgeks ıpetada ja meelde tuletada\nolulisimaid f¸¸sikalisi mıisteid ja nende definitsioone. M‰ng k‰ib nii, et ekraanile ilmub\ndefinitsioon ning selle algusest on puudu mıiste. ‹lesandeks on uuele reale kirjutada mıiste.\n");
+    System.out.println("Kohe hakkame m‰ngima ¸ht huvitavat m‰ngu. Selle idee on Sulle selgeks ıpetada ja meelde tuletada\nolulisimaid f¸¸sikalisi mıisteid ja nende definitsioone. M‰ng k‰ib nii, et ekraanile ilmub\ndefinitsioon ning selle algusest on puudu mıiste. ‹lesandeks on uuele reale kirjutada mıiste.\n");
     System.out.println("‚ù§ ‚ù§ ‚ù§ ‚ù§ ‚ù§ ‚ù§ ‚ù§ ‚ù§ ‚ù§ ‚ù§ ‚ù§ ‚ù§ ‚ù§ ‚ù§ ‚ù§ ‚ù§ ‚ù§ ‚ù§ ‚ù§ ‚ù§ ‚ù§ ‚ù§ ‚ù§ ‚ù§ ‚ù§ ‚ù§ ‚ù§ ‚ù§ ‚ù§ ‚ù§ ‚ù§ ‚ù§ ‚ù§ ‚ù§ ‚ù§ ‚ù§ ‚ù§ ‚ù§ ‚ù§ ‚ù§ ‚ù§ ‚ù§ ‚ù§ ‚ù§ ‚ù§ ‚ù§ ‚ù§ ‚ù§ ‚ù§ ‚ù§ ‚ù§‚ù§‚ù§‚ù§\nAlustame ıppimisega ‚ù§ Et definitsioon ilmuks, vajutage ENTERit. NB! vastamisel on oluline ıige k‰‰ndevormi ja mıiste vıib-olla ka v‰ljend!\nKui soovite ıppimist lıpetada, kirjutage 'stop'");
     String vajutus = scan.nextLine();
     
@@ -37,7 +37,7 @@ public static void main(String[] args) throws Exception {
 	   System.out.println(def);
 	   Scanner vajutus1 = new Scanner(System.in);
 	   System.out.print(""); 	 
-	   String vastus = scan.nextLine().toLowerCase(); // teen t√§hed v√§ikseks
+	   String vastus = scan.nextLine().toLowerCase(); // teen t‰hed v‰ikseks
 	   int asukoht = mıiste.indexOf(vastus);
 	   if(asukoht==defin){
 		   
@@ -45,7 +45,8 @@ public static void main(String[] args) throws Exception {
 		   System.out.println("V‰ga tubli! ıige vastus");}
 	   else{
 		   System.out.println("Tundub, et midagi l‰ks valesti. Vıib-olla peaksite konspekti uurima!");
-	   }}
+	   }
+	   }
     
      for(int i = 0; i < mıiste.size(); i++){
         System.out.println(mıiste.get(i)+ "-" + definitsioon.get(i));
