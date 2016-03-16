@@ -22,8 +22,7 @@ public class Küsimus {
         }
         onÕige = false;
         return false;
-        
-  
+          
     } 
     public String getDefinitsioon() {
         return definitsioon;
@@ -37,8 +36,8 @@ public class Küsimus {
 
 	@Override
 	public String toString() {
-		return "\nKüsimus [definitsioon= " + definitsioon + ", õige_vastus= " + õige_vastus + ", Teie vastus= "
-				+ mängija_vastus + ", Tulemus=" + onÕige + "]";
+		return "\nKüsimus -----DEFINITSIOON: " + definitsioon + " ÕIGE VASTUS= " + õige_vastus + ". Teie vastus= "
+				+ mängija_vastus + " Tulemus:" + onÕige + "-----";
 	}   
     
     

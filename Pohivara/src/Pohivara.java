@@ -26,8 +26,7 @@ public static void main(String[] args) throws Exception {
     Scanner scan = new Scanner (System.in);
     System.out.println("Kohe hakkame m�ngima �ht huvitavat m�ngu. Selle idee on Sulle selgeks �petada ja meelde tuletada\nolulisimaid f��sikalisi m�isteid ja nende definitsioone. M�ng k�ib nii, et ekraanile ilmub\ndefinitsioon ning selle algusest on puudu m�iste. �lesandeks on uuele reale kirjutada m�iste.\n");
     System.out.println("❤ ❤ ❤ ❤ ❤ ❤ ❤ ❤ ❤ ❤ ❤ ❤ ❤ ❤ ❤ ❤ ❤ ❤ ❤ ❤ ❤ ❤ ❤ ❤ ❤ ❤ ❤ ❤ ❤ ❤ ❤ ❤ ❤ ❤ ❤ ❤ ❤ ❤ ❤ ❤ ❤ ❤ ❤ ❤ ❤ ❤ ❤ ❤ ❤ ❤ ❤❤❤❤\nAlustame �ppimisega ❤ Et definitsioon ilmuks, vajutage ENTERit. NB! vastamisel on oluline �ige k��ndevormi ja m�iste v�ib-olla ka v�ljend!\nKui soovite �ppimist l�petada, kirjutage 'stop'");
-    String vajutus = scan.nextLine();
-    
+    scan.close();
     Random counter = new Random();
     int tsükli_pikkus = counter.nextInt(20)+1; // suvalise arvu kordi teeb tüsklit. Plaanis on panna lugema õiged vastused, et hiljem tagasisidet anda.
   
@@ -35,7 +34,6 @@ public static void main(String[] args) throws Exception {
 	   int defin = new Random().nextInt(definitsioon.size()-1);
 	   String def = definitsioon.get(defin);
 	   System.out.println(def);
-	   Scanner vajutus1 = new Scanner(System.in);
 	   System.out.print(""); 	 
 	   String vastus = scan.nextLine().toLowerCase(); // teen t�hed v�ikseks
 	   int asukoht = mõiste.indexOf(vastus);
