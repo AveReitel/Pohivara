@@ -1,9 +1,0 @@
-diff a/Pohivara/src/Pohivara.java b/Pohivara/src/Pohivara.java	(rejected hunks)
-@@ -24,6 +24,7 @@
-         definitsioon.add(tükid[1]);}
-         
-     Scanner scan = new Scanner (System.in);
-+    System.out.println("Kohe hakkame mängima üht huvitavat mängu. Selle idee on Sulle selgeks õpetada ja meelde tuletada\nolulisimaid füüsikalisi mõisteid ja nende definitsioone. Mäng käib nii, et ekraanile ilmub\ndefinitsioon ning selle algusest on puudu mõiste. Ülesandeks on uuele reale kirjutada mõiste.\n");
-     System.out.println("â¤ â¤ â¤ â¤ â¤ â¤ â¤ â¤ â¤ â¤ â¤ â¤ â¤ â¤ â¤ â¤ â¤ â¤ â¤ â¤ â¤ â¤ â¤ â¤ â¤ â¤ â¤ â¤ â¤ â¤ â¤ â¤ â¤ â¤ â¤ â¤ â¤ â¤ â¤ â¤ â¤ â¤ â¤ â¤ â¤ â¤ â¤ â¤ â¤ â¤ â¤â¤â¤â¤\nAlustame õppimisega â¤ Et definitsioon ilmuks, vajutage ENTERit. NB! vastamisel on oluline õige käändevormi ja mõiste võib-olla ka väljend!\nKui soovite õppimist lõpetada, kirjutage 'stop'");
-     String vajutus = scan.nextLine();
-     
