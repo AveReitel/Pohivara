@@ -33,7 +33,7 @@ public class Questionnaire {
     private void alustaMängu() throws InterruptedException {
     	
     	Random counter = new Random();
-        int tsükli_pikkus = counter.nextInt(15)+7;
+        int tsükli_pikkus = counter.nextInt(8)+7;
 
         Scanner scanner = new Scanner(System.in);
         int correctAnswers = 0;
